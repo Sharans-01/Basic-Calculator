@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1d, #3a4452, #0e153a);
+    background-size: 200% 200%;
+}
+
+.calculator {
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(13, 13, 13, 0.853);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(240, 232, 232, 0.764);
+    transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+    transform: translateY(-5px);
+}
+
+input {
+    width: 100%;
+    border: 2px solid #00d4ff;
+    padding: 20px;
+    margin: 15px 0;
+    background: rgba(52, 42, 42, 0.74);
+    border-radius: 8px;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    text-align: right;
+    color: #ffffff;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 4px 15px rgba(0, 255, 255, 0.6);
+    border-color: #00ff88;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+button {
+    border: 2px solid transparent;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #2a2b2f, #19191c);
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.2),
+                5px 5px 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+    border-color: #00d4ff;
+}
+
+button:active {
+    transform: scale(1);
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.6);
+    border-color: #ff5722;
+}
+
+.equalBtn {
+    background: linear-gradient(145deg, #fb7c00, #ff9900);
+    border: 2px solid #fb7c00;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.equalBtn:hover {
+    background: linear-gradient(145deg, #ff9900, #fb7c00);
+    color: #000000;
+    border-color: #ff5722;
+}
+
+.operator {
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    font-weight: bold;
+}
+
+.clear {
+    color: red;
+    border: 2px solid red;
+    font-weight: bold;
+}
+
+.clear:hover {
+    color: darkred;
+    border-color: darkred;
+}
+
+@media (max-width: 768px) {
+    input {
+        font-size: 18px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
